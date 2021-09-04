@@ -9,7 +9,7 @@
       <select
         v-model="selectedValue"
         @change="onChange(selectedValue)"
-        class="block w-full mt-1 bg-gray-100 border-transparent rounded-md  focus:border-gray-500 focus:bg-white focus:ring-0"
+        class="block w-full mt-1 bg-gray-100 border-transparent rounded-md appearance-none  focus:border-gray-500 focus:bg-white focus:ring-0"
         :aria-label="label"
       >
         <option
