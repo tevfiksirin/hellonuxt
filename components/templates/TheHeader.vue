@@ -1,12 +1,12 @@
 <template>
   <div>
-    <header class="w-full text-gray-600 body-font">
+    <header class="w-full h-20 text-gray-600 body-font">
       <div
-        class="container flex flex-col flex-wrap items-center justify-between p-5 mx-auto md:flex-row"
+        class="container flex flex-col flex-wrap items-center justify-between p-5 mx-auto  md:flex-row"
       >
         <nuxt-link
           :to="localePath('/')"
-          class="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0"
+          class="flex items-center mb-4 font-medium text-gray-900  title-font md:mb-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -25,44 +25,43 @@
           <span class="ml-3 text-xl">Tailblocks</span>
         </nuxt-link>
 
-      <nav class="hidden lg:flex lg:pt-1 xl:pt-0">
-        <ul class="flex text-center">
-          <li
-            v-for="link in $t('header.links')"
-            :key="link.slug"
-            class="py-2 xl:px-4 lg:py-0 lg:px-2"
-          >
-            <NuxtLink
-              v-if="!link.href"
-              class="block font-medium uppercase transition-colors duration-300 ease-linear hover:no-underline light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
-              :to="
-                localePath({
-                  name: link.slug,
-                  params: { book: 'get-started', slug: 'installation' }
-                })
-              "
+        <nav class="hidden lg:flex lg:pt-1 xl:pt-0">
+          <ul class="flex text-center">
+            <li
+              v-for="link in $t('header.links')"
+              :key="link.slug"
+              class="py-2 xl:px-4 lg:py-0 lg:px-2"
             >
-              {{ link.name }}
-            </NuxtLink>
-            <a
-              v-else
-              :key="link.href"
-              :href="link.href"
-              target="_blank"
-              rel="noopener"
-              class="block font-medium uppercase transition-colors duration-300 ease-linear hover:no-underline hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
-            >
-              {{ link.name }}
-              <span
-                class="px-1 text-white lowercase align-top bg-orange-500 rounded-sm dark:text-black text-ss"
+              <NuxtLink
+                v-if="!link.href"
+                class="block font-medium uppercase transition-colors duration-300 ease-linear  hover:no-underline light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
+                :to="
+                  localePath({
+                    name: link.slug,
+                    params: { book: 'get-started', slug: 'installation' },
+                  })
+                "
               >
-                new
-              </span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
+                {{ link.name }}
+              </NuxtLink>
+              <a
+                v-else
+                :key="link.href"
+                :href="link.href"
+                target="_blank"
+                rel="noopener"
+                class="block font-medium uppercase transition-colors duration-300 ease-linear  hover:no-underline hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
+              >
+                {{ link.name }}
+                <span
+                  class="px-1 text-white lowercase align-top bg-orange-500 rounded-sm  dark:text-black text-ss"
+                >
+                  new
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
 
         <button class="">
           <AppLangSelect
@@ -75,7 +74,6 @@
             </template>
           </AppLangSelect>
         </button>
-
       </div>
     </header>
   </div>
