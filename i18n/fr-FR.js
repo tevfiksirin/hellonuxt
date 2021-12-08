@@ -7,13 +7,18 @@ module.exports = {
         slug: 'selam'
       },
       {
+        name: 'a-propos',
+        icon: 'person',
+        slug: 'about'
+      },
+      {
         name: 'Nuxt',
         icon: 'video',
         href: 'https://nuxtjs.org'
       }
     ],
 
-  },  
+  },
   links: {
     download: "Télécharger"
   },

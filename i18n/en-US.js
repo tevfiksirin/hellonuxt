@@ -7,8 +7,13 @@ module.exports = {
         slug: 'selam'
       },
       {
+        name: 'About',
+        icon: 'person',
+        slug: 'about'
+      },
+      {
         name: 'Nuxt',
-        icon: 'video',
+        icon: 'search',
         href: 'https://nuxtjs.org'
       }
     ],

@@ -50,6 +50,14 @@ export default {
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
   i18n: {
+    parsePages: false,
+    pages: {
+      about: {
+        en: '/about-us', // -> accessible at /about-us (no prefix since it's the default locale)
+        fr: '/a-propos', // -> accessible at /fr/a-propos
+        tr: '/hakkimizda'     // -> accessible at /es/sobre
+      }
+    },
     locales: [
       {
         code: "en",
